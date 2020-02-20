@@ -65,14 +65,13 @@ server.delete('/api/posts/:id', (req, res) => {
         //delete object from arr
         const parseId = parseInt(id, 10);
         posts = posts.filter(o => o.id !== parseId);
-        res.send(posts);
         res.statusCode = 200;
     } catch (e) {
         res.statusCode = 404;
     }
-
+    res.send(posts);
 });
 
+const port = process.env.PORT || 9999;
 
-
-server.listen(9999);
+server.listen(port);
