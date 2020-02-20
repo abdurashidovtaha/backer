@@ -1,0 +1,29 @@
+@api = http://localhost:9999/api
+
+GET {{api}}/posts
+
+### 
+
+POST {{api}}/posts
+Content-Type: application/json
+
+{
+    "id": 7,
+    "category": "food",
+    "price": "700"
+}
+
+###
+
+POST {{api}}/posts
+Content-Type: application/json
+
+{
+    "id": 36,
+    "name": "jkhjkhl"
+}
+
+###
+GET {{api}}/posts/1
+###
+DELETE {{api}}/posts/7
